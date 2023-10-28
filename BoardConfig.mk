@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/brcm/rpi4
+DEVICE_PATH := device/brcm/rpi5
 
 # Platform
 TARGET_NO_BOOTLOADER := true
@@ -45,7 +45,7 @@ BOARD_MESA3D_VULKAN_DRIVERS := broadcom
 # Kernel
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
-BOARD_KERNEL_CMDLINE := console=ttyS0,115200 no_console_suspend root=/dev/ram0 rootwait androidboot.hardware=rpi4
+BOARD_KERNEL_CMDLINE := console=ttyS0,115200 no_console_suspend root=/dev/ram0 rootwait androidboot.hardware=rpi5
 
 # Manifest
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
@@ -66,7 +66,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/brcm/rpi4/sepolicy
+BOARD_SEPOLICY_DIRS += device/brcm/rpi5/sepolicy
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Treble

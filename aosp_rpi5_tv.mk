@@ -5,7 +5,7 @@
 #
 
 # Inherit device configuration
-$(call inherit-product, device/brcm/rpi4/device.mk)
+$(call inherit-product, device/brcm/rpi5/device.mk)
 
 PRODUCT_AAPT_PREF_CONFIG := tvdpi
 PRODUCT_CHARACTERISTICS := tv
@@ -34,9 +34,9 @@ PRODUCT_PACKAGES += \
     WifiRpiOverlay
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_DEVICE := rpi4
-PRODUCT_NAME := aosp_rpi4_tv
+PRODUCT_DEVICE := rpi5
+PRODUCT_NAME := aosp_rpi5_tv
 PRODUCT_BRAND := Raspberry
-PRODUCT_MODEL := Raspberry Pi 4
+PRODUCT_MODEL := Raspberry Pi 5
 PRODUCT_MANUFACTURER := Raspberry
-PRODUCT_RELEASE_NAME := Raspberry Pi 4
+PRODUCT_RELEASE_NAME := Raspberry Pi 5

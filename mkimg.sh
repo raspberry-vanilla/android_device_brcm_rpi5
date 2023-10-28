@@ -8,9 +8,9 @@
 
 VERSION=RaspberryVanillaAOSP14
 DATE=$(date +%Y%m%d)
-IMGNAME=${VERSION}-${DATE}-rpi4.img
+IMGNAME=${VERSION}-${DATE}-rpi5.img
 IMGSIZE=7
-OUTDIR=$(pwd | sed 's/\/device\/brcm\/rpi4$//')/out/target/product/rpi4
+OUTDIR=$(pwd | sed 's/\/device\/brcm\/rpi5$//')/out/target/product/rpi5
 
 echo "Creating image file ${OUTDIR}/${IMGNAME}..."
 sudo dd if=/dev/zero of="${OUTDIR}/${IMGNAME}" bs=1M count=$(echo "${IMGSIZE}*1024" | bc)

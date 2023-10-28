@@ -4,12 +4,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/brcm/rpi4
+DEVICE_PATH := device/brcm/rpi5
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, frameworks/native/build/tablet-7in-xhdpi-2048-dalvik-heap.mk)
-$(call inherit-product, vendor/brcm/rpi4/rpi4-vendor.mk)
+$(call inherit-product, vendor/brcm/rpi5/rpi5-vendor.mk)
 
 # APEX
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -220,11 +220,11 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/ramdisk/fstab.rpi4:$(TARGET_COPY_OUT_RAMDISK)/fstab.rpi4 \
-    $(DEVICE_PATH)/ramdisk/fstab.rpi4:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.rpi4 \
-    $(DEVICE_PATH)/ramdisk/init.rpi4.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rpi4.rc \
-    $(DEVICE_PATH)/ramdisk/init.rpi4.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rpi4.usb.rc \
-    $(DEVICE_PATH)/ramdisk/ueventd.rpi4.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
+    $(DEVICE_PATH)/ramdisk/fstab.rpi5:$(TARGET_COPY_OUT_RAMDISK)/fstab.rpi5 \
+    $(DEVICE_PATH)/ramdisk/fstab.rpi5:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.rpi5 \
+    $(DEVICE_PATH)/ramdisk/init.rpi5.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rpi5.rc \
+    $(DEVICE_PATH)/ramdisk/init.rpi5.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rpi5.usb.rc \
+    $(DEVICE_PATH)/ramdisk/ueventd.rpi5.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
 
 # Seccomp
 PRODUCT_COPY_FILES += \

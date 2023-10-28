@@ -5,11 +5,11 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_rpi4.mk \
-    $(LOCAL_DIR)/aosp_rpi4_car.mk \
-    $(LOCAL_DIR)/aosp_rpi4_tv.mk
+    $(LOCAL_DIR)/aosp_rpi5.mk \
+    $(LOCAL_DIR)/aosp_rpi5_car.mk \
+    $(LOCAL_DIR)/aosp_rpi5_tv.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_rpi4-userdebug \
-    aosp_rpi4_car-userdebug \
-    aosp_rpi4_tv-userdebug
+    aosp_rpi5-userdebug \
+    aosp_rpi5_car-userdebug \
+    aosp_rpi5_tv-userdebug

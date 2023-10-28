@@ -1,10 +1,10 @@
-import /vendor/etc/init/hw/init.rpi4.usb.rc
+import /vendor/etc/init/hw/init.rpi5.usb.rc
 
 on init
     symlink /sdcard /storage/sdcard0
 
 on fs
-    mount_all /vendor/etc/fstab.rpi4
+    mount_all /vendor/etc/fstab.rpi5
 
 on post-fs-data
     # Create the directories used by the Wireless subsystem

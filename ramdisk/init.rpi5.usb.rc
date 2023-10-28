@@ -7,7 +7,7 @@ on boot
     write /config/usb_gadget/g1/idVendor 0x18d1
     write /config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
     write /config/usb_gadget/g1/strings/0x409/manufacturer "Raspberry"
-    write /config/usb_gadget/g1/strings/0x409/product "Pi 4"
+    write /config/usb_gadget/g1/strings/0x409/product "Pi 5"
     mkdir /config/usb_gadget/g1/functions/ffs.adb
     mkdir /config/usb_gadget/g1/functions/ffs.mtp
     mkdir /config/usb_gadget/g1/functions/ffs.ptp

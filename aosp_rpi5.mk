@@ -5,7 +5,7 @@
 #
 
 # Inherit device configuration
-$(call inherit-product, device/brcm/rpi4/device.mk)
+$(call inherit-product, device/brcm/rpi5/device.mk)
 
 PRODUCT_AAPT_CONFIG := normal mdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
@@ -25,9 +25,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/tablet_core_hardware.xml
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_DEVICE := rpi4
-PRODUCT_NAME := aosp_rpi4
+PRODUCT_DEVICE := rpi5
+PRODUCT_NAME := aosp_rpi5
 PRODUCT_BRAND := Raspberry
-PRODUCT_MODEL := Raspberry Pi 4
+PRODUCT_MODEL := Raspberry Pi 5
 PRODUCT_MANUFACTURER := Raspberry
-PRODUCT_RELEASE_NAME := Raspberry Pi 4
+PRODUCT_RELEASE_NAME := Raspberry Pi 5

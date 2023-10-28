@@ -5,7 +5,7 @@
 #
 
 # Inherit device configuration
-$(call inherit-product, device/brcm/rpi4/device.mk)
+$(call inherit-product, device/brcm/rpi5/device.mk)
 
 PRODUCT_AAPT_CONFIG := normal mdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
@@ -52,7 +52,7 @@ ENABLE_EVS_SERVICE := true
 ENABLE_REAR_VIEW_CAMERA_SAMPLE := true
 
 PRODUCT_COPY_FILES += \
-    device/brcm/rpi4/camera/evs_config_override.json:${TARGET_COPY_OUT_VENDOR}/etc/automotive/evs/config_override.json
+    device/brcm/rpi5/camera/evs_config_override.json:${TARGET_COPY_OUT_VENDOR}/etc/automotive/evs/config_override.json
 
 # Overlays
 PRODUCT_PACKAGES += \
@@ -71,9 +71,9 @@ PRODUCT_PACKAGES += \
     android.hardware.automotive.vehicle@2.0-default-service
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_DEVICE := rpi4
-PRODUCT_NAME := aosp_rpi4_car
+PRODUCT_DEVICE := rpi5
+PRODUCT_NAME := aosp_rpi5_car
 PRODUCT_BRAND := Raspberry
-PRODUCT_MODEL := Raspberry Pi 4
+PRODUCT_MODEL := Raspberry Pi 5
 PRODUCT_MANUFACTURER := Raspberry
-PRODUCT_RELEASE_NAME := Raspberry Pi 4
+PRODUCT_RELEASE_NAME := Raspberry Pi 5
