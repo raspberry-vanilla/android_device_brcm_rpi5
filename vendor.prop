@@ -46,7 +46,6 @@ debug.drm.mode.force=1920x1080
 # FFmpeg
 persist.ffmpeg_codec2.rank.audio=16
 persist.ffmpeg_codec2.rank.video=256
-persist.ffmpeg_codec2.v4l2.h264=false
 persist.ffmpeg_codec2.v4l2.h265=true
 
 # Graphics
@@ -73,13 +72,6 @@ debug.stagefright.c2inputsurface=-1
 
 # MGLRU
 persist.device_config.mglru_native.lru_gen_config=core
-
-# V4L2
-debug.stagefright.c2-poolmask=0xf50000
-persist.v4l2_codec2.rank.decoder=128
-persist.v4l2_codec2.rank.encoder=128
-ro.vendor.v4l2_codec2.decode_concurrent_instances=8
-ro.vendor.v4l2_codec2.encode_concurrent_instances=8
 
 # Wifi
 wifi.interface=wlan0

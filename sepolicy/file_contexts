@@ -49,6 +49,3 @@
 
 # USB
 /vendor/bin/hw/android\.hardware\.usb\.gadget@1\.2-service\.rpi              u:object_r:hal_usb_gadget_default_exec:s0
-
-# V4L2
-/vendor/bin/hw/android\.hardware\.media\.c2@1\.0-service-v4l2(.*)?           u:object_r:mediacodec_exec:s0

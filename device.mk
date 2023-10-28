@@ -253,16 +253,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
-# V4L2
-PRODUCT_SOONG_NAMESPACES += external/v4l2_codec2
-
-PRODUCT_PACKAGES += \
-    android.hardware.media.c2@1.0-service-v4l2 \
-    libc2plugin_store
-
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/media/media_codecs_v4l2_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_v4l2_c2_video.xml
-
 # Virtualization
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
 

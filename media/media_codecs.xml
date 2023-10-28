@@ -18,7 +18,6 @@
 
 <MediaCodecs>
     <Include href="media_codecs_ffmpeg_c2.xml" />
-    <Include href="media_codecs_v4l2_c2_video.xml" />
     <Include href="media_codecs_google_c2_audio.xml" />
     <Include href="media_codecs_google_c2_tv.xml" />
     <Include href="media_codecs_google_c2_video.xml" />
