@@ -34,6 +34,7 @@ dtoverlay=vc4-kms-v3d
 
 # Serial console
 enable_uart=1
+dtparam=uart0=on
 
 # SPI
 #dtparam=spi=on
