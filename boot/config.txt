@@ -5,9 +5,6 @@ kernel=Image
 # Ramdisk
 initramfs ramdisk.img followkernel
 
-# Audio
-dtparam=audio=on
-
 # Camera
 camera_auto_detect=1
 start_x=1

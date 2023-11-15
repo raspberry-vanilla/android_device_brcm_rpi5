@@ -5,7 +5,7 @@ persist.audio.pcm.card=0
 persist.audio.pcm.device=0
 ro.config.media_vol_default=20
 ro.config.media_vol_steps=25
-ro.hardware.audio.primary=rpi
+ro.hardware.audio.primary=rpi_hdmi
 
 # Bluetooth
 bluetooth.device.class_of_device?=90,2,12
