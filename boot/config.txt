@@ -1,5 +1,4 @@
 # Kernel
-arm_64bit=1
 kernel=Image
 
 # Ramdisk
@@ -9,9 +8,6 @@ initramfs ramdisk.img followkernel
 camera_auto_detect=1
 start_x=1
 
-# CPU
-arm_boost=1
-
 # Display
 disable_overscan=1
 
@@ -20,7 +16,6 @@ disable_overscan=1
 #dtoverlay=rpi-backlight
 
 # Graphics acceleration
-disable_fw_kms_setup=1
 dtoverlay=vc4-kms-v3d
 
 # I2C
@@ -38,6 +33,3 @@ dtparam=uart0=on
 
 # USB
 dtoverlay=dwc2,dr_mode=peripheral
-[cm4]
-dtoverlay=dwc2,dr_mode=otg
-[all]
