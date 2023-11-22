@@ -104,6 +104,9 @@ PRODUCT_PACKAGES += \
     ipa_rpi_pisp
 
 PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/camera/android.hardware.camera.provider@2.5-service_64.rpi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.5-service_64.rpi.rc
+
+PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/camera/camera_hal.yaml:$(TARGET_COPY_OUT_VENDOR)/etc/libcamera/camera_hal.yaml \
     external/libcamera/src/ipa/rpi/pisp/data/imx219.json:$(TARGET_COPY_OUT_VENDOR)/etc/libcamera/ipa/rpi/pisp/imx219.json \
     external/libcamera/src/ipa/rpi/pisp/data/imx219_noir.json:$(TARGET_COPY_OUT_VENDOR)/etc/libcamera/ipa/rpi/pisp/imx219_noir.json \
