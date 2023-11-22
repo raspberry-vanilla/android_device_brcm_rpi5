@@ -53,6 +53,7 @@ ro.hardware.egl=mesa
 ro.hardware.hwcomposer=drm
 ro.hardware.vulkan=broadcom
 ro.opengles.version=196609
+vendor.hwc.backend_override=rpi5
 vendor.hwc.drm.ctm=DRM_OR_IGNORE
 
 # LMKD
