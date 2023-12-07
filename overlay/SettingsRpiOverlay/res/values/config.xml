@@ -24,6 +24,9 @@
     <!-- Whether charging_sounds should be shown or not. -->
     <bool name="config_show_charging_sounds">false</bool>
 
+    <!-- Whether data_saver should be shown or not. -->
+    <bool name="config_show_data_saver">false</bool>
+
     <!-- Whether battery from app_info_settings is available or not. -->
     <bool name="config_show_app_info_settings_battery">false</bool>
 
