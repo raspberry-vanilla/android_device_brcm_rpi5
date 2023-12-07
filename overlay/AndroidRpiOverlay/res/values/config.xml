@@ -121,7 +121,4 @@
     <bool name="config_cecTvSendStandbyOnSleepEnabled_default">false</bool>
     <bool name="config_cecTvSendStandbyOnSleepDisabled_default">true</bool>
 
-    <!-- Is the lock-screen disabled for new users by default -->
-    <bool name="config_disableLockscreenByDefault">true</bool>
-
 </resources>

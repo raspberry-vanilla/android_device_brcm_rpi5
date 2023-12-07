@@ -68,6 +68,9 @@ ro.lmk.medium=800
 ro.lmk.upgrade_pressure=100
 ro.lmk.use_minfree_levels=true
 
+# Lockscreen
+ro.lockscreen.disable.default=true
+
 # Media
 debug.stagefright.c2inputsurface=-1
 
