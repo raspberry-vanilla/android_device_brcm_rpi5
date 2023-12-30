@@ -21,4 +21,4 @@
 /dev/ion                                                                     0664   system     system
 
 # USB
-/sys/class/udc/fe980000.usb  current_speed                                   0664   system     system
+/sys/class/udc/1000480000.usb  current_speed                                 0664   system     system
