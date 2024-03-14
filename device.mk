@@ -7,7 +7,9 @@
 DEVICE_PATH := device/brcm/rpi5
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
+ifeq ($(TARGET_ARCH),arm64)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+endif
 $(call inherit-product, frameworks/native/build/tablet-7in-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, vendor/brcm/rpi5/rpi5-vendor.mk)
 
