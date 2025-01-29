@@ -6,14 +6,27 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+
+die() {
+   echo "$@"
+   exit 1
+}
+
+if [ -z "${TARGET_PRODUCT}" ]; then
+   die "TARGET_PRODUCT environment variable is not set. Run lunch first."
+fi
+
+if [ -z "${ANDROID_PRODUCT_OUT}" ]; then
+   die "ANDROID_PRODUCT_OUT environment variable is not set. Run lunch first."
+fi
+
 VERSION=RaspberryVanillaAOSP15
 DATE=$(date +%Y%m%d)
-IMGNAME=${VERSION}-${DATE}-rpi5.img
+IMGNAME=${VERSION}-${DATE}-${TARGET_PRODUCT}.img
 IMGSIZE=7
-OUTDIR=$(pwd | sed 's/\/device\/brcm\/rpi5$//')/out/target/product/rpi5
 
-echo "Creating image file ${OUTDIR}/${IMGNAME}..."
-sudo dd if=/dev/zero of="${OUTDIR}/${IMGNAME}" bs=1M count=$(echo "${IMGSIZE}*1024" | bc)
+echo "Creating image file ${ANDROID_PRODUCT_OUT}/${IMGNAME}..."
+sudo dd if=/dev/zero of="${ANDROID_PRODUCT_OUT}/${IMGNAME}" bs=1M count=$(echo "${IMGSIZE}*1024" | bc)
 sync
 
 echo "Creating partitions..."
@@ -44,28 +57,28 @@ echo c
 echo a
 echo 1
 echo w
-) | sudo fdisk "${OUTDIR}/${IMGNAME}"
+) | sudo fdisk "${ANDROID_PRODUCT_OUT}/${IMGNAME}"
 sync
 
-LOOPDEV=$(sudo kpartx -av "${OUTDIR}/${IMGNAME}" | awk 'NR==1{ sub(/p[0-9]$/, "", $3); print $3 }')
+LOOPDEV=$(sudo kpartx -av "${ANDROID_PRODUCT_OUT}/${IMGNAME}" | awk 'NR==1{ sub(/p[0-9]$/, "", $3); print $3 }')
 if [ -z ${LOOPDEV} ]; then
-  echo "Unable to find loop device!"
-  exit 1
+  die "Unable to find loop device!"
 fi
 echo "Image mounted as /dev/${LOOPDEV}"
 sleep 1
 
 echo "Copying boot..."
-sudo dd if=${OUTDIR}/boot.img of=/dev/mapper/${LOOPDEV}p1 bs=1M
+sudo dd if=${ANDROID_PRODUCT_OUT}/boot.img of=/dev/mapper/${LOOPDEV}p1 bs=1M
 echo "Copying system..."
-sudo dd if=${OUTDIR}/system.img of=/dev/mapper/${LOOPDEV}p2 bs=1M
+sudo dd if=${ANDROID_PRODUCT_OUT}/system.img of=/dev/mapper/${LOOPDEV}p2 bs=1M
 echo "Copying vendor..."
-sudo dd if=${OUTDIR}/vendor.img of=/dev/mapper/${LOOPDEV}p3 bs=1M
+sudo dd if=${ANDROID_PRODUCT_OUT}/vendor.img of=/dev/mapper/${LOOPDEV}p3 bs=1M
 echo "Creating userdata..."
 sudo mkfs.ext4 /dev/mapper/${LOOPDEV}p4 -I 512 -L userdata
 sync
 
 sudo kpartx -d "/dev/${LOOPDEV}"
-echo "Done, created ${OUTDIR}/${IMGNAME}!"
 
+echo "Done, created ${ANDROID_PRODUCT_OUT}/${IMGNAME}!"
 exit 0
+
