@@ -2,6 +2,10 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
+# To change boot device, change /dev/block/mmcblk0p* (sdcard/eMMC) entries to 
+# /dev/block/sda* (USB) or 
+# /dev/block/nvme0n1p* (NVME SSD) for system, vendor, and data partitions.
+
 #<src>                                     <mnt_point>  <type>  <mnt_flags and options>                             <fs_mgr_flags>
 /dev/block/mmcblk0p2                       /system      ext4    ro,barrier=1                                        wait,first_stage_mount
 /dev/block/mmcblk0p3                       /vendor      ext4    ro,barrier=1                                        wait,first_stage_mount
