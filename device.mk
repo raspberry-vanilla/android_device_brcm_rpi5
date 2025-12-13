@@ -210,6 +210,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
-
-# Window extensions
-$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)

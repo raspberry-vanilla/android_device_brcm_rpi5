@@ -69,6 +69,3 @@ ro.boot.hypervisor.vm.supported=1
 # Wifi
 ro.boot.wificountrycode=00
 wifi.interface=wlan0
-
-# Window extensions
-persist.settings.large_screen_opt.enabled=true

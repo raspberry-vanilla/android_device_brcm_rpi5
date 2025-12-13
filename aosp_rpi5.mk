@@ -20,6 +20,9 @@ $(call enforce-product-packages-exist,)
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/keylayout/Generic.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Generic.kl
 
+# Large screen
+$(call inherit-product, $(SRC_TARGET_DIR)/product/large_screen_common.mk)
+
 # Overlays
 PRODUCT_PACKAGES += \
     AndroidRpiOverlay \
