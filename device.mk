@@ -75,9 +75,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.hdmi.cec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hdmi.cec.xml
 
-# Debugfs
-PRODUCT_SET_DEBUGFS_RESTRICTIONS := false
-
 # DRM
 PRODUCT_PACKAGES += \
     com.android.hardware.drm.clearkey
