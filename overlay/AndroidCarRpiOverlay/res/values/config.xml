@@ -23,19 +23,6 @@
          is disableable for products for which it is irrelevant. -->
     <bool name="config_useVolumeKeySounds">false</bool>
 
-    <!-- Flag indicating whether the current device is "voice capable".
-         If true, this means that the device supports circuit-switched
-         (i.e. voice) phone calls over the telephony network, and is
-         allowed to display the in-call UI while a cellular voice call is
-         active.  This can be overridden to false for "data only" devices
-         which can't make voice calls and don't support any in-call UI.
-
-         Note: this flag is subtly different from the
-         PackageManager.FEATURE_TELEPHONY system feature, which is
-         available on *any* device with a telephony radio, even if the
-         device is data-only. -->
-    <bool name="config_voice_capable">false</bool>
-
     <!-- Flag indicating whether the current device allows sms service.
          If true, this means that the device supports both sending and
          receiving sms via the telephony network.
@@ -51,6 +38,9 @@
          the telephony network.
          This can be overridden to false for devices that support voice and/or sms . -->
     <bool name="config_mobile_data_capable">false</bool>
+
+    <!-- The name of the package that will hold the dialer role by default. -->
+    <string name="config_defaultDialer" translatable="false">com.android.car.dialer</string>
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
