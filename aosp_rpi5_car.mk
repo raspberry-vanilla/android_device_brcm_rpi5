@@ -101,7 +101,7 @@ include packages/services/Car/car_product/occupant_awareness/OccupantAwareness.m
 
 # Overlays
 PRODUCT_PACKAGES += \
-    AndroidRpiOverlay \
+    AndroidCarRpiOverlay \
     BluetoothRpiOverlay \
     CarServiceRpiOverlay \
     SettingsProviderRpiOverlay \

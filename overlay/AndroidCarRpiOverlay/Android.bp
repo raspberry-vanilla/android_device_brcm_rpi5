@@ -1,0 +1,10 @@
+// Copyright (C) 2021-2022 KonstaKANG
+//
+// SPDX-License-Identifier: Apache-2.0
+
+runtime_resource_overlay {
+    name: "AndroidCarRpiOverlay",
+    resource_dirs: ["res"],
+    sdk_version: "current",
+    vendor: true,
+}
