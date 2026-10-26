@@ -57,9 +57,6 @@ ro.lockscreen.disable.default=true
 debug.stagefright.c2inputsurface=-1
 media.c2.hal.selection=aidl
 
-# MGLRU
-persist.device_config.mglru_native.lru_gen_config=core
-
 # Virtualization
 ro.boot.hypervisor.vm.supported=1
 
