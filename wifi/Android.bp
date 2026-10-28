@@ -15,6 +15,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "p2p_supplicant_overlay.conf",
+    src: "p2p_supplicant_overlay.conf",
+    relative_install_path: "wifi",
+    installable: false,
+}
+
+prebuilt_etc {
     name: "wpa_supplicant.conf.rpi",
     src: ":wpa_supplicant_template.conf",
     filename: "wpa_supplicant.conf",
@@ -62,6 +69,7 @@ apex {
     prebuilts: [
         "android.hardware.wifi.supplicant-service.rc",
         "android.hardware.wifi.supplicant.xml.prebuilt",
+        "p2p_supplicant_overlay.conf",
         "wpa_supplicant.conf.rpi",
         "wpa_supplicant_overlay.conf",
     ],

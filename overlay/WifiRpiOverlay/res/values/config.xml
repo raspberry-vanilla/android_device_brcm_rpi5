@@ -36,6 +36,9 @@
     <!-- Do not translate. Default access point SSID used for tethering -->
     <string name="wifi_tether_configure_ssid_default" translatable="false">Raspberry Pi 5</string>
 
+    <!-- Indicate the prefix of wifi p2p device name, the length should be between 1 ~ 28. -->
+    <string translatable="false" name="config_wifiP2pDeviceNamePrefix">Raspberry Pi 5_</string>
+
     <!-- Indicate whether the verbose logging is always on -->
     <!-- 0: verbose logging controlled by user
          1: verbose logging on by default for userdebug/eng

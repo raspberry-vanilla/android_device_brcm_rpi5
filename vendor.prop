@@ -65,4 +65,5 @@ ro.boot.hypervisor.vm.supported=1
 
 # Wifi
 ro.boot.wificountrycode=00
+wifi.direct.interface=p2p-dev-wlan0
 wifi.interface=wlan0
