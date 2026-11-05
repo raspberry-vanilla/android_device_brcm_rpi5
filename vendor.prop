@@ -58,6 +58,8 @@ debug.stagefright.c2inputsurface=-1
 media.c2.hal.selection=aidl
 
 # Virtualization
+ro.boot.hypervisor.protected_vm.supported=0
+ro.boot.hypervisor.version=0.0.1
 ro.boot.hypervisor.vm.supported=1
 
 # Wifi
