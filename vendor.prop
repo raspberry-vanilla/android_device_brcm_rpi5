@@ -61,6 +61,8 @@ media.c2.hal.selection=aidl
 persist.device_config.mglru_native.lru_gen_config=core
 
 # Virtualization
+ro.boot.hypervisor.protected_vm.supported=0
+ro.boot.hypervisor.version=0.0.1
 ro.boot.hypervisor.vm.supported=1
 
 # Wifi
