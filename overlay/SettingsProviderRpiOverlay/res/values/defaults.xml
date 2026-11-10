@@ -21,9 +21,6 @@
     <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL -->
     <string name="def_device_name_simple">Raspberry Pi 5</string>
 
-    <!-- Default screen brightness -->
-    <integer name="def_screen_brightness">128</integer>
-
     <!-- Disable bluetooth by default -->
     <bool name="def_bluetooth_on">false</bool>
 

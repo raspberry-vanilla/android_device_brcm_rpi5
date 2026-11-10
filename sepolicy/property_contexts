@@ -14,3 +14,7 @@ persist.vendor.ffmpeg_codec2.v4l2.h265   u:object_r:vendor_ffmpeg_config_prop:s0
 # Graphics
 vendor.hwc.drm.ctm         u:object_r:vendor_hwc_config_prop:s0
 vendor.hwc.drm.force_mode  u:object_r:vendor_hwc_config_prop:s0
+
+# Lights
+vendor.hwc.drm.min_display_brightness                    u:object_r:vendor_hwc_config_prop:s0
+vendor.hwc.drm.scale_brightness_range_to_min_brightness  u:object_r:vendor_hwc_config_prop:s0
