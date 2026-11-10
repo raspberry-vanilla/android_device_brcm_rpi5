@@ -11,10 +11,7 @@ camera_auto_detect=1
 disable_overscan=1
 
 # Display panel
-#dtoverlay=vc4-kms-dsi-7inch
-#dtoverlay=vc4-kms-dsi-ili79600-10-1inch
-#dtoverlay=vc4-kms-dsi-ili9881-5inch
-#dtoverlay=vc4-kms-dsi-ili9881-7inch
+display_auto_detect=1
 
 # Graphics acceleration
 dtoverlay=vc4-kms-v3d
