@@ -1,19 +1,17 @@
 on early-boot
+    chown system system /sys/class/backlight/10-0045/bl_power
     chown system system /sys/class/backlight/10-0045/brightness
     chown system system /sys/class/backlight/10-0045/max_brightness
+    chown system system /sys/class/backlight/10-0045/scale
+    chown system system /sys/class/backlight/11-0045/bl_power
     chown system system /sys/class/backlight/11-0045/brightness
     chown system system /sys/class/backlight/11-0045/max_brightness
-    chown system system /sys/class/backlight/rpi_backlight/brightness
-    chown system system /sys/class/backlight/rpi_backlight/max_brightness
+    chown system system /sys/class/backlight/11-0045/scale
+    chmod 660 /sys/class/backlight/10-0045/bl_power
     chmod 660 /sys/class/backlight/10-0045/brightness
     chmod 440 /sys/class/backlight/10-0045/max_brightness
+    chmod 440 /sys/class/backlight/10-0045/scale
+    chmod 660 /sys/class/backlight/11-0045/bl_power
     chmod 660 /sys/class/backlight/11-0045/brightness
     chmod 440 /sys/class/backlight/11-0045/max_brightness
-    chmod 660 /sys/class/backlight/rpi_backlight/brightness
-    chmod 440 /sys/class/backlight/rpi_backlight/max_brightness
-
-service vendor.light-rpi /apex/com.android.hardware.light.rpi/bin/hw/android.hardware.light-service.rpi
-    class hal
-    user system
-    group system
-    shutdown critical
+    chmod 440 /sys/class/backlight/11-0045/scale

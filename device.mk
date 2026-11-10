@@ -120,8 +120,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml
 
 # Lights
-PRODUCT_PACKAGES += \
-    com.android.hardware.light.rpi
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/lights/dsi-backlight.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dsi-backlight.rc
 
 # Media
 PRODUCT_COPY_FILES += \

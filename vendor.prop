@@ -50,6 +50,10 @@ persist.vendor.ffmpeg_codec2.v4l2.h265=true
 vendor.hwc.drm.ctm=DRM_OR_IGNORE
 vendor.hwc.drm.force_mode=1920x1080
 
+# Lights
+vendor.hwc.drm.min_display_brightness=0.001
+vendor.hwc.drm.scale_brightness_range_to_min_brightness=true
+
 # Lockscreen
 ro.lockscreen.disable.default=true
 

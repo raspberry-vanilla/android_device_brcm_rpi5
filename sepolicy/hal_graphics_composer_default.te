@@ -5,3 +5,8 @@ allow hal_graphics_composer_default self:netlink_kobject_uevent_socket { bind cr
 
 gpu_access(hal_graphics_composer_default)
 get_prop(hal_graphics_composer_default, vendor_hwc_config_prop)
+
+# Lights
+allow hal_graphics_composer_default sysfs_leds:lnk_file read;
+allow hal_graphics_composer_default sysfs_leds:file rw_file_perms;
+allow hal_graphics_composer_default sysfs_leds:dir r_dir_perms;
