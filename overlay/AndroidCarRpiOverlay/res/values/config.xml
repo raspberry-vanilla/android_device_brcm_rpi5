@@ -42,10 +42,6 @@
     <!-- The name of the package that will hold the dialer role by default. -->
     <string name="config_defaultDialer" translatable="false">com.android.car.dialer</string>
 
-    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
-         autodetected from the Configuration. -->
-    <bool name="config_showNavigationBar">true</bool>
-
     <!-- This string array should be overridden by the device to present a list of network
          attributes.  This is used by the connectivity manager to decide which networks can coexist
          based on the hardware -->
@@ -86,22 +82,8 @@
     -->
     <integer name="config_longPressOnPowerBehavior">1</integer>
 
-    <!-- Control the default night mode to use when there is no other mode override set.
-         One of the following values (see UiModeManager.java):
-             0 - MODE_NIGHT_AUTO
-             1 - MODE_NIGHT_NO
-             2 - MODE_NIGHT_YES
-    -->
-    <integer name="config_defaultNightMode">2</integer>
-
     <!-- CEC Configuration -->
     <bool name="config_cecTvSendStandbyOnSleepEnabled_default">false</bool>
     <bool name="config_cecTvSendStandbyOnSleepDisabled_default">true</bool>
-
-    <!-- Whether desktop mode is supported on the current device  -->
-    <bool name="config_isDesktopModeSupported">true</bool>
-
-    <!-- Whether the developer option for desktop mode is supported on the current device  -->
-    <bool name="config_isDesktopModeDevOptionSupported">true</bool>
 
 </resources>
