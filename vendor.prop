@@ -54,9 +54,6 @@ vendor.hwc.drm.force_mode=1920x1080
 vendor.hwc.drm.min_display_brightness=0.001
 vendor.hwc.drm.scale_brightness_range_to_min_brightness=true
 
-# Lockscreen
-ro.lockscreen.disable.default=true
-
 # Media
 debug.stagefright.c2inputsurface=-1
 media.c2.hal.selection=aidl

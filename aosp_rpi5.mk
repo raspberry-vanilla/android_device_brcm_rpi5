@@ -29,6 +29,10 @@ $(call soong_config_set_bool,rpi_keylayout,use_generic_keylayout_rpi,true)
 # Large screen
 $(call inherit-product, $(SRC_TARGET_DIR)/product/large_screen_common.mk)
 
+# Lockscreen
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.lockscreen.disable.default=true
+
 # Overlays
 PRODUCT_PACKAGES += \
     AndroidRpiOverlay \
