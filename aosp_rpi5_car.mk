@@ -104,7 +104,7 @@ PRODUCT_PACKAGES += \
     AndroidCarRpiOverlay \
     BluetoothRpiOverlay \
     CarServiceRpiOverlay \
-    SettingsProviderRpiOverlay \
+    SettingsProviderCarRpiOverlay \
     WifiRpiOverlay
 
 # Permissions
