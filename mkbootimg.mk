@@ -7,19 +7,18 @@
 DEVICE_PATH := device/brcm/rpi5
 KERNEL_PATH := device/brcm/rpi5-kernel
 
-RPI_BOOT_OUT := $(PRODUCT_OUT)/rpiboot
-$(RPI_BOOT_OUT): $(INSTALLED_RAMDISK_TARGET)
-	mkdir -p $(RPI_BOOT_OUT)
-	mkdir -p $(RPI_BOOT_OUT)/overlays
-	cp $(DEVICE_PATH)/boot/* $(RPI_BOOT_OUT)
-	cp $(KERNEL_PATH)/Image $(RPI_BOOT_OUT)
-	cp $(KERNEL_PATH)/bcm2712*-rpi-*.dtb $(RPI_BOOT_OUT)
-	cp $(KERNEL_PATH)/overlays/* $(RPI_BOOT_OUT)/overlays
-	cp $(PRODUCT_OUT)/ramdisk.img $(RPI_BOOT_OUT)
-	echo $(BOARD_KERNEL_CMDLINE) > $(RPI_BOOT_OUT)/cmdline.txt
+BOOT_FILES := $(wildcard $(DEVICE_PATH)/boot/*)
+KERNEL_FILES := $(KERNEL_PATH)/Image $(wildcard $(KERNEL_PATH)/bcm2712*.dtb)
+KERNEL_OVERLAY_FILES := $(wildcard $(KERNEL_PATH)/overlays/*)
 
-$(INSTALLED_BOOTIMAGE_TARGET): $(RPI_BOOT_OUT)
+$(INSTALLED_BOOTIMAGE_TARGET): $(BOOT_FILES) $(INSTALLED_RAMDISK_TARGET) $(KERNEL_FILES) $(KERNEL_OVERLAY_FILES)
 	$(call pretty,"Target boot image: $@")
 	dd if=/dev/zero of=$@ bs=1M count=128
 	mkfs.fat -F 32 -n "boot" $@
-	mcopy -s -i $@ $(RPI_BOOT_OUT)/* ::
+	mmd -i $@ overlays
+	echo $(BOARD_KERNEL_CMDLINE) > $(PRODUCT_OUT)/cmdline.txt
+	mcopy -i $@ $(PRODUCT_OUT)/cmdline.txt ::
+	mcopy -i $@ $(PRODUCT_OUT)/ramdisk.img ::
+	$(foreach FILE,$(BOOT_FILES),$(shell mcopy -i $@ $(FILE) ::))
+	$(foreach FILE,$(KERNEL_FILES),$(shell mcopy -i $@ $(FILE) ::))
+	$(foreach FILE,$(KERNEL_OVERLAY_FILES),$(shell mcopy -i $@ $(FILE) ::overlays))
